@@ -1,0 +1,261 @@
+/* page styling along with input boxes and labels */
+#div1{
+    margin-top:100px;
+    margin-left: 250px;
+    width: 900px;
+    height: 300px;
+    border: 3px  gray;
+    padding: 10px;
+    background-color: whitesmoke;
+
+}
+op1{
+    float: right;
+}
+#div2{
+    margin-left: 350px;
+   /* margin-top: auto; */
+    
+}
+.deletebUTTON{
+    width: fit-content;
+    color: white;
+    background-color: rebeccapurple;
+    margin-left: 20px;
+}
+
+#div4{
+    align-content: center;
+    margin-left: 350px;
+
+}
+#page{
+    background-color: whitesmoke;
+
+}
+
+h1{
+    font-size:26px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label{
+    width: 240px;
+    font-size:18px;
+    font-weight: bold;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button{
+    background-color: rebeccapurple;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-weight: normal;
+    width: 200px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 245px; 
+}
+
+input{
+    width: 185px;
+    margin: 0px 0px 5px;
+    padding: 4px 6px;
+    align-content: center;
+}
+
+select{
+    width: 200px;
+    margin: 0px 0px 5px;
+    padding: 4px 6px
+}
+
+.text1{
+    color:gray;
+}
+
+/* image styling */
+img{
+    size: 300px;
+    height: 75px;
+    vertical-align:middle;
+}
+/* menu bar styling of the page */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  rebeccapurple;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: lightgray;
+}
+
+.active {
+    background-color: mediumpurple;
+}
+
+.newdiv1{
+    background-color: lightgray;
+    color: black;
+    margin-top: 40px;
+    align-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: normal;
+    font-size: 15px;
+
+}
+.newdiv12{
+    
+    background-color:lightgray;
+    color: black;
+    margin-top: 30px;
+    align-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    margin-left:auto;
+    margin-right:auto;
+    width: fit-content;
+    height: fit-content;
+    font-weight: normal;
+    font-size: 13px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslategrey;
+    font-size: 17px;
+    font-weight: 600;
+}
+.newdiv13{
+    background-color:lightgray;
+    color: black;
+    margin-top: 30px;
+    align-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    width: 800px;
+    height: 100px;
+    margin-right:400px;
+    font-weight: normal;
+    font-size: 13px;
+}
+.newdiv13{
+    background-color:lightgray;
+    color: black;
+    margin-top: 30px;
+    align-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    margin-left: 350px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+table, td {
+    border: 1px solid black;
+    align-content: center;
+    
+  }
+
+  table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 2;
+    width: 90%;
+    border: 1px solid #ddd;
+    font-size: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+
+ 
+ /* th, td { */
+th,td{
+    text-align: center;
+    padding: 16px;
+    width: 200px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+  }
+  .ok{
+      color:white;
+      background-color: rebeccapurple;
+  }
+  .lec{
+    color:black;
+    background-color: lightgreen;
+  }
+  .lec1{
+    color:black;
+    background-color:gray;
+    font-weight: bold;
+  }
+  .lab{
+      background-color: lightpink;
+  }
+  .tut{
+      background-color: lightblue;
+  }
+  .ok2{
+    color:black;
+    background-color:white;
+  }
+  .addButton{
+      width: 100px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .removeButton{
+    width: 80px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightcyan;
+    color:black;
+  }
+
+.view{
+    margin-left: 10px;
+
+}
+.delete{
+    margin-left: 10px;
+}
+.names1{
+    margin-left:1px;
+}
+
+.label22{
+    margin-right: 0px;
+}
