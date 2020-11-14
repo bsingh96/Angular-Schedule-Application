@@ -1,0 +1,35 @@
+
+<div id="div1" class="div11">
+    <div id="div2">
+        <br>
+        <br>
+        <br>
+   <form >
+       <label for= "courseID" id="text1">Subject:</label>
+       <select name="course" id="courseID">
+           <option value="all_subjects" id="op1">All Subjects</option>
+       </select>
+       <br>
+       <br>
+       <label for= "courseNumber">Course Number:</label>
+       <input name = "courseNum" id="courseNumber" type="text" placeholder="eg. 1000A" maxlength="5">
+       <br>
+       <br>
+       <label for= "courseComp">Course Component:</label>
+       <select name="courseComponent" id="courseComp">
+           <option value="all_components">All </option>
+           <option value="LEC">Lecture </option>
+           <option value="TUT">Tutorial</option>
+           <option value="LAB">Laboratory </option>
+       </select>
+       <br>
+       <br>
+       <button type="button"  (click)="getSubjects()" id="submit23">Submit</button>
+   </form>
+  
+    </div>
+   
+</div>
+<div id="show"></div>
+<router-outlet></router-outlet>
+

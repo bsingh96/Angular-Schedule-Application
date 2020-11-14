@@ -1,0 +1,46 @@
+<div id="div1" class="div11">
+    <div id = "div123">
+        <br><br>
+        <label>Schedule Name:</label>
+        <input name="ScheduleName" id="scheduleName">
+        <br><br>
+        <button type="button" onclick="scheduleName()" id="submitName">Add Schedule</button>
+        
+    </div>
+    <div id="div2">
+   <form >
+       <br><br>
+       <label for= "courseID" id="text1">Subject:</label>
+       <select name="course" id="courseID">
+           <option value="all_subjects" id="op1">All Subjects</option>
+       </select>
+       <br>
+       <br>
+       <label for= "courseNumber">Course Number:</label>
+       <input name = "courseNumb" id="courseNumber" type="text" placeholder="eg. 1000A" maxlength="5">
+       <br>
+       <br>
+       <label for= "courseComp">Course Component:</label>
+       <select name="courseComponent" id="courseComp">
+           <option value="all_components">All </option>
+           <option value="LEC">Lecture </option>
+           <option value="TUT">Tutorial</option>
+           <option value="LAB">Laboratory </option>
+       </select>
+       <br>
+       <br>
+       <label for= "Schedulenaming">Schedule:</label>
+       <select name="courseComponent" id="Schedulenaming">
+    </select>
+    <br><br>
+       <button type="button"  onclick ="ShowResult1()" id="submit23">Submit</button>
+    <br><br>
+   </form>
+   
+    </div>
+   
+</div>
+<br><br>
+<div id="show"></div>
+
+<router-outlet></router-outlet>

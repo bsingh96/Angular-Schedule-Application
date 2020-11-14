@@ -1,20 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddComponent } from './add/add.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule, } from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http'
+
+import {BackendServiceService} from './backend-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponent
+   routingComponents,
   ],
-  imports: [
+  imports: [ RouterModule, 
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule, 
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BackendServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
