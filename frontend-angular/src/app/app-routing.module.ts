@@ -7,6 +7,7 @@ const routes : Routes = [
     {path : 'home' , component: SearchComponent},
     {path : 'addschedule' , component: AddComponent},
     {path : 'manageschedule' , component: ManageComponent},
+    {path: '', redirectTo:'home', pathMatch:'full'}
 ];
 
 @NgModule({

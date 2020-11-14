@@ -1,6 +1,6 @@
 /* page styling along with input boxes and labels */
 #div1{
-    margin-top:100px;
+    margin-top:10px;
     margin-left: 250px;
     width: 900px;
     height: 500px;
@@ -8,6 +8,9 @@
     padding: 10px;
     background-color: lightgray;
 
+}
+h2{
+    color: lightgreen;
 }
 #div123{
     margin-top:20px;

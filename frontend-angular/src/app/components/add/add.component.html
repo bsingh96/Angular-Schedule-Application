@@ -2,9 +2,9 @@
     <div id = "div123">
         <br><br>
         <label>Schedule Name:</label>
-        <input name="ScheduleName" id="scheduleName">
+        <input name="ScheduleName" id="scheduleName" autocomplete="off">
         <br><br>
-        <button type="button" onclick="scheduleName()" id="submitName">Add Schedule</button>
+        <button mat-button type="button" (click)="addnew()" id="submitName">Add Schedule</button>
         
     </div>
     <div id="div2">
@@ -33,7 +33,7 @@
        <select name="courseComponent" id="Schedulenaming">
     </select>
     <br><br>
-       <button type="button"  onclick ="ShowResult1()" id="submit23">Submit</button>
+       <button mat-button type="button"  (click) ="showResults()" id="submit23">Submit</button>
     <br><br>
    </form>
    
