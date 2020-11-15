@@ -36,7 +36,7 @@ export class AddComponent implements OnInit {
       console.log(this.courses);
     })
   }
-  
+  // function to validate input from textbox and adding the schedule to the database
   addSchedule() : void{
     const regex = /^[^<>:/?#@!&;]*$/;
     var userInput = (<HTMLInputElement>document.getElementById("scheduleName")).value;

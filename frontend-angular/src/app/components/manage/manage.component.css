@@ -254,7 +254,7 @@ table{
     text-align: center;
     padding: 16px;
     width: 200px;
-    background-color: lightyellow;
+    background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     color:black;
     }
@@ -264,7 +264,15 @@ table{
         height: fit-content;
     }
 
-    .title2{
-        color: green;
-    }
+  
+    .subject{
+        background-color: white;
     
+    }
+
+    .code{
+        background-color: white;
+    }
+    .name{
+        background-color: white;
+    }
