@@ -45,3 +45,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+
+#ignore images
+*.png
+/src/favicon.ico
+/src/assets/images/logo.png
