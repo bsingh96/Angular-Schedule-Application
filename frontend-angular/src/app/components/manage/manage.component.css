@@ -35,9 +35,11 @@ op1{
 }
 
 h1{
+    margin-top: 20px;
     font-size:26px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 label{
@@ -125,7 +127,7 @@ li a:hover:not(.active) {
     margin-right: auto;
     font-weight: normal;
     font-size: 15px;
-
+    height: fit-content;
 }
 .newdiv12{
     
@@ -140,15 +142,17 @@ li a:hover:not(.active) {
     margin-left:auto;
     margin-right:auto;
     width: fit-content;
-    height: fit-content;
     font-weight: normal;
     font-size: 13px;
+    height: fit-content;
+   
 }
 p{
     font-family: Arial, Helvetica, sans-serif;
     color: darkslategrey;
     font-size: 17px;
     font-weight: 600;
+    text-align: center;
 }
 .newdiv13{
     background-color:lightgray;
@@ -160,7 +164,7 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     color:black;
     width: 800px;
-    height: 100px;
+    height: fit-content;
     margin-right:400px;
     font-weight: normal;
     font-size: 13px;
@@ -175,6 +179,7 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     color:black;
     margin-left: 350px;
+    height: fit-content;
     font-weight: normal;
     font-size: 15px;
 }
@@ -253,3 +258,13 @@ table{
     font-family: Arial, Helvetica, sans-serif;
     color:black;
     }
+
+    .show4{
+        background-color:lightgray;
+        height: fit-content;
+    }
+
+    .title2{
+        color: green;
+    }
+    

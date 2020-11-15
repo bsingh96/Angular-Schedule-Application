@@ -296,3 +296,14 @@ th,td{
     background-color: lightsteelblue;
 }
 
+.LEC{
+    background-color: lightgreen;
+}
+
+.LAB{
+    background-color: lightpink;  
+}
+
+.TUT{
+    background-color: lightblue;
+}

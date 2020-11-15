@@ -11,7 +11,6 @@ export class ManageComponent implements OnInit {
   constructor(private http: HttpClient){
   }
   courses: any[];
-  
   deleteAll() : void {
     var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
     console.log(schedule);
@@ -49,11 +48,37 @@ alert("This schedule could not be deleted. Try again.")
   }
   
   loadSchedule(){
+    var div = document.getElementById("show2");
+    div.innerHTML = "";
+    var div2 = document.getElementById("newDiv43")
+    var tag = document.getElementById("titletag");
+    var info = document.getElementById("infotag");
     var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
     var request = "/api/schedule/find/schedule?"+"scheduleName="+schedule;
     this.http.get<any>(this.mainUrl + request).subscribe(data => {
+      console.log(data.alert);
+      if(data.length>0){
       this.courses = data;
       console.log(this.courses);
+      //div2.setAttribute("class","newdiv13")
+      //var x1 = document.createElement("H1");
+      var x2 = document.createTextNode(schedule);
+      var x4 = document.createTextNode("Displaying " + data.length +" course(s)")
+      //var x5 = document.createElement("p");
+      tag.appendChild(x2);
+      info.appendChild(x4)
+      div2.appendChild(x1);
+    
+    
+      }else if(data.alert =="No courses found."){
+        div.setAttribute("class","newdiv13")
+        var x1 = document.createElement("H1");
+        var x2 = document.createTextNode("Courses Not Found!")
+        x1.appendChild(x2);
+        div.appendChild(x1);
+      }
+
+      
     })
   }
 

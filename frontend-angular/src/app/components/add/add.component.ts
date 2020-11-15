@@ -12,11 +12,20 @@ export class AddComponent implements OnInit {
   }
   courses: any[];
   showResults1() : void {
-    var div = document.getElementById("show");
+    var div = document.getElementById("show12");
     div.innerHTML = "";
     var courseCode = (<HTMLInputElement>document.getElementById("courseID")).value;
     var courseNum = (<HTMLInputElement>document.getElementById("courseNumber")).value;
-    var courseComp = (<HTMLInputElement>document.getElementById("courseComp")).value
+    var courseComp = (<HTMLInputElement>document.getElementById("courseComp")).value;
+    if(courseCode == "all_subjects" && courseNum == ""){
+      //alert("Unable to display your search results as it exceeds 200 courses. Please refine your search.");
+      var header = document.createElement("H2");
+      div.setAttribute("class","newdiv11");
+      var text = document.createTextNode("Unable to display your search results as it exceeds 100 courses. Please refine your search.");
+      header.appendChild(text);
+      div.appendChild(header);
+      return;
+      }
     console.log(courseCode);
     console.log(courseNum + " " + courseComp);
     var link = "/api/courses?"+ "course=" + courseCode +"&courseNum=" + courseNum+ "&courseComponent=" + courseComp;
@@ -29,15 +38,23 @@ export class AddComponent implements OnInit {
   }
   
   addSchedule() : void{
+    const regex = /^[^<>:/?#@!&;]*$/;
     var userInput = (<HTMLInputElement>document.getElementById("scheduleName")).value;
+    var input = document.getElementById("scheduleName");
+    if(!userInput.match(regex)){
+      alert("Invalid Input!");
+      window.location.reload();
+    return;
+    }
     var inputLink = "/api/schedules?"+ "ScheduleName="+userInput;
     
-    this.http.put<any>(this.mainUrl+inputLink,this).subscribe(()=>{
+    this.http.put<any>(this.mainUrl+inputLink,userInput).subscribe(()=>{
     });
     
        
    // console.log("added"+userInput)
-    alert("added");
+    alert("Schedule Sucessfully Added !");
+    window.location.reload();
   }
   addCourse(course_subject:String,button_id:String,coursename:String){
     var buttonid= button_id;
@@ -46,7 +63,7 @@ export class AddComponent implements OnInit {
     console.log(link);
     this.http.put<any>(this.mainUrl + link , schedule).subscribe(() => {
      alert("Added " +course_subject+" "+ button_id + " : " + coursename + " to "+ schedule);
-     
+
     })
     //alert("added");
   }
