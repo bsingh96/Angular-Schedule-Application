@@ -12,9 +12,9 @@ export class SearchComponent implements OnInit {
   constructor(private http: HttpClient){
 
   }
-
+// gets the subjects from the backend and stores it into an array to be accessed by html 
   getSubjects() : void {
-    var div = document.getElementById("show");
+    var div = document.getElementById("show13");
     div.innerHTML = "";
     var courseCode = (<HTMLInputElement>document.getElementById("courseID")).value;
     var courseNum = (<HTMLInputElement>document.getElementById("courseNumber")).value;
@@ -41,7 +41,7 @@ export class SearchComponent implements OnInit {
   }
   
   title = 'Lab 4';
-
+// populates the dropdown menu on load
   ngOnInit(){
     this.http.get<any>(this.mainUrl + '/api/courses/subject').subscribe(data => {
       //console.log(data);

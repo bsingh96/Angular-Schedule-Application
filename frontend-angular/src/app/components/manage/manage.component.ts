@@ -11,6 +11,8 @@ export class ManageComponent implements OnInit {
   constructor(private http: HttpClient){
   }
   courses: any[];
+
+  // method to delete all the schedules  from the database 
   deleteAll() : void {
     var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
     console.log(schedule);
@@ -18,6 +20,7 @@ export class ManageComponent implements OnInit {
      alert("There are no schedules available to delete.");
      return;
    }
+   // issues a delete request to delete all schedules from database
     this.http.delete<any>(this.mainUrl + '/api/schedule/deleteAll').subscribe(data =>{
       if(data.alert == "sucessfully deleted."){
       alert("Sucessfully deleted all schedules.");
@@ -27,14 +30,15 @@ export class ManageComponent implements OnInit {
     }
     })
   }
-
+// method to delete a specific schedule based on user input
   deleteSchedule() :void{
  var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
- if(schedule == ""){
+ if(schedule == ""){// if dropdown menu is empty, alert user 
   alert("There are no schedules available to delete.");
   return;
 }
  var link = "/api/schedule/savedCourse/delete?"+"Schedulenaming="+schedule;
+ //delete request to delete the specific schedule from the database 
  this.http.delete<any>(this.mainUrl + link).subscribe(data =>{
   if(data.alert == "sucessfully deleted."){
   alert("This schedule was sucesfully deleted. ");
@@ -46,7 +50,7 @@ alert("This schedule could not be deleted. Try again.")
  })
   
   }
-  
+  // load the schedules based on what the user requests
   loadSchedule(){
     var div = document.getElementById("show2");
     div.innerHTML = "";
@@ -81,7 +85,7 @@ alert("This schedule could not be deleted. Try again.")
       
     })
   }
-
+// populate dropdown menu on page load
   ngOnInit(): void {
     this.http.get<any>(this.mainUrl + '/api/schedule/saved').subscribe(data => {
       //console.log(data);

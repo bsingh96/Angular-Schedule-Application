@@ -30,7 +30,7 @@
     </div>
    
 </div>
-<div id="show12"></div>
+<div id="show13"></div>
 <div >
     <div *ngFor="let course of storage" class ="newdiv1">
         <!--<h3 >{{ course.subject }}</h3>-->             
@@ -38,8 +38,8 @@
           <p class="ok2">Course Description: {{ course.catalog_description }}</p>      
           <table class ="table12">
               <tr class= "tr12">
+                <th>Component</th>
                   <th>Section</th>
-                  <th>Component</th>
                   <th>Class Number</th>
                   <th>Days</th>
                   <th>Start Time</th>
@@ -49,8 +49,9 @@
                   <th>Status</th>
               </tr>
               <tr>
-                  <td>{{ course.course_info[0].class_section }}</td>
+        
                   <td class="{{ course.course_info[0].ssr_component }}">{{ course.course_info[0].ssr_component }}</td>
+                  <td>{{ course.course_info[0].class_section }}</td>
                   <td>{{ course.course_info[0].class_nbr }}</td>
                   <td>{{ course.course_info[0].days }}</td>
                   <td>{{ course.course_info[0].start_time }}</td>
