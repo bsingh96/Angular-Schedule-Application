@@ -18,7 +18,16 @@ export class SearchComponent implements OnInit {
     div.innerHTML = "";
     var courseCode = (<HTMLInputElement>document.getElementById("courseID")).value;
     var courseNum = (<HTMLInputElement>document.getElementById("courseNumber")).value;
-    var courseComp = (<HTMLInputElement>document.getElementById("courseComp")).value
+    var courseComp = (<HTMLInputElement>document.getElementById("courseComp")).value;
+    if(courseCode == "all_subjects" && courseNum == ""){
+      //alert("Unable to display your search results as it exceeds 200 courses. Please refine your search.");
+      var header = document.createElement("H2");
+      div.setAttribute("class","newdiv11");
+      var text = document.createTextNode("Unable to display your search results as it exceeds 100 courses. Please refine your search.");
+      header.appendChild(text);
+      div.appendChild(header);
+      return;
+      }
     console.log(courseCode);
     console.log(courseNum + " " + courseComp);
     var link = "/api/courses?"+ "course=" + courseCode +"&courseNum=" + courseNum+ "&courseComponent=" + courseComp;
@@ -28,6 +37,7 @@ export class SearchComponent implements OnInit {
       this.storage = data;
       //console.log(this.storage);
     })
+   
   }
   
   title = 'Lab 4';

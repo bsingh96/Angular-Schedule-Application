@@ -9,6 +9,7 @@
     background-color: whitesmoke;
 
 }
+
 .table12{
     margin-left: 100px;
     background-color: lightgreen;
@@ -122,7 +123,19 @@ li a:hover:not(.active) {
 .active {
     background-color: mediumpurple;
 }
-
+.newdiv11{
+    background-color:lightgray;
+    color: black;
+    margin-top: 40px;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    width: 900px;
+    margin-left:300px ;
+}
 .newdiv1{
     background-color:lightsteelblue;
     color: black;
