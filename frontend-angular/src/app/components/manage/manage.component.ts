@@ -10,7 +10,8 @@ export class ManageComponent implements OnInit {
   mainUrl = 'http://www.localhost:3000'
   constructor(private http: HttpClient){
   }
-
+  courses: any[];
+  
   deleteAll() : void {
     var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
     console.log(schedule);
@@ -46,20 +47,16 @@ alert("This schedule could not be deleted. Try again.")
  })
   
   }
-  loadSchedules() : void {
-    //var div = document.getElementById("show2");
-    //div.innerHTML = "";
-    //div.setAttribute("class","newdiv13");
-    var div = document.getElementById("show2");
-    div.innerHTML = "";
-    div.setAttribute("class","newdiv13");
+  
+  loadSchedule(){
     var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
     var request = "/api/schedule/find/schedule?"+"scheduleName="+schedule;
-    this.http.get<any>(this.mainUrl + request).subscribe(data =>{
-    alert(JSON.stringify(data));
-    
+    this.http.get<any>(this.mainUrl + request).subscribe(data => {
+      this.courses = data;
+      console.log(this.courses);
     })
   }
+
   ngOnInit(): void {
     this.http.get<any>(this.mainUrl + '/api/schedule/saved').subscribe(data => {
       //console.log(data);

@@ -31,6 +31,40 @@
    
 </div>
 <div id="show"></div>
+<div >
+    <div *ngFor="let course of storage" class ="newdiv1">
+        <!--<h3 >{{ course.subject }}</h3>-->             
+          <h1>{{ course.subject }} {{ course.catalog_nbr }} :- {{ course.className }} </h1>                    
+          <p class="ok2">Course Description: {{ course.catalog_description }}</p>      
+          <table class ="table12">
+              <tr class= "tr12">
+                  <th>Section</th>
+                  <th>Component</th>
+                  <th>Class Number</th>
+                  <th>Days</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Campus</th>
+                  <th>Instructor</th>
+                  <th>Status</th>
+              </tr>
+              <tr>
+                  <td>{{ course.course_info[0].class_section }}</td>
+                  <td class="{{ course.course_info[0].ssr_component }}">{{ course.course_info[0].ssr_component }}</td>
+                  <td>{{ course.course_info[0].class_nbr }}</td>
+                  <td>{{ course.course_info[0].days }}</td>
+                  <td>{{ course.course_info[0].start_time }}</td>
+                  <td>{{ course.course_info[0].end_time }}</td>
+                  <td>{{ course.course_info[0].campus }}</td>
+                  <td>{{ course.course_info[0].instructors }}</td>
+                  <td>{{ course.course_info[0].enrl_stat }}</td>
+              </tr>
+              
+          </table> 
+      
+      
+      </div>
+</div>
 
 <router-outlet></router-outlet>
 

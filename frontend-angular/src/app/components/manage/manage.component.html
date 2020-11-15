@@ -5,7 +5,7 @@
         <label class="label22"for= "Schedulenaming">Schedule:</label>
         <select class="names1" name="courseComponent" id="Schedulenaming"></select>
        
-        <button  mat-button class="view" type="button" (click)="loadSchedules()">View Schedule</button>
+        <button  mat-button class="view" type="button" (click)="loadSchedule()">View Schedule</button>
         <button mat-button class ="delete" type="button" (click)="deleteSchedule()">Delete Schedule</button>
         <br><br>
         <button mat-button type="button" (click)="deleteAll()">Delete All Schedules</button>
@@ -13,6 +13,23 @@
    
 </div>
 <div id ="show2"></div>
-<br><br>
+
+<div class= "course" *ngFor="let course of courses" class="newdiv12">                
+  <!--<h1>{{course.courseSubject}}</h1>--> 
+  <table>
+    <tr>
+        <th>Course Subject</th>
+        <th>Course Code</th>
+        <th>Course Name</th>
+
+    </tr>
+    <tr>
+        <td>{{ course.courseSubject }}</td>
+        <td>{{ course.courseCode }}</td>
+        <td>{{ course.courseName }}</td>
+    </tr>
+    
+</table> 
+</div> 
 
 <router-outlet></router-outlet>

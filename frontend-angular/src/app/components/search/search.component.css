@@ -9,8 +9,15 @@
     background-color: whitesmoke;
 
 }
+.table12{
+    margin-left: 100px;
+    background-color: lightgreen;
+}
 .table2{
     border-color: black;
+}
+.tr12{
+    color: limegreen;
 }
 op1{
     float: right;
@@ -117,18 +124,22 @@ li a:hover:not(.active) {
 }
 
 .newdiv1{
-    background-color: lightgray;
+    background-color:lightsteelblue;
     color: black;
     margin-top: 40px;
     align-content: center;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: auto;
     margin-right: auto;
     font-weight: normal;
     font-size: 15px;
+    height: 300px;
 
+}
+.divshow{
+    background-color:yellowgreen;
 }
 .newdiv12{
     
@@ -184,9 +195,7 @@ p{
 table, th, td {
     border: 1px solid black;
   }
-table{
-    border: lightgreen;
-}
+
 table, td {
     border: 1px solid black;
     align-content: center;
@@ -268,5 +277,9 @@ th,td{
 
 .label22{
     margin-right: 0px;
+}
+.ok2{
+   margin-left: 3px;
+    background-color: lightsteelblue;
 }
 

@@ -33,7 +33,7 @@
        <select name="courseComponent" id="Schedulenaming">
     </select>
     <br><br>
-       <button mat-button type="button"  (click) ="showResults()" id="submit23">Submit</button>
+       <button mat-button type="button"  (click) ="showResults1()" id="submit23">Submit</button>
     <br><br>
    </form>
    
@@ -42,5 +42,36 @@
 </div>
 <br><br>
 <div id="show"></div>
-
+<div class= "course" *ngFor="let course of courses" class="newdiv12">                
+    <h1>{{ course.subject }} {{ course.catalog_nbr }} - {{ course.className }}   </h1>              
+    <p>Course Description: {{ course.catalog_description }}</p> 
+        
+    <table>
+        <tr>
+            <th>Section</th>
+            <th>Component</th>
+            <th>Class Number</th>
+            <th>Days</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Campus</th>
+            <th>Instructor</th>
+            <th>Status</th>
+            <th>Save to Draft</th>
+        </tr>
+        <tr>
+            <td>{{ course.course_info[0].class_section }}</td>
+            <td class="{{ course.course_info[0].ssr_component }}">{{ course.course_info[0].ssr_component }}</td>
+            <td>{{ course.course_info[0].class_nbr }}</td>
+            <td>{{ course.course_info[0].days }}</td>
+            <td>{{ course.course_info[0].start_time }}</td>
+            <td>{{ course.course_info[0].end_time }}</td>
+            <td>{{ course.course_info[0].campus }}</td>
+            <td>{{ course.course_info[0].instructors }}</td>
+            <td>{{ course.course_info[0].enrl_stat }}</td>
+            <td><button mat-button class="addButton" (click)="addCourse(course.subject , course.catalog_nbr,course.className )">Add Course</button> </td>
+        </tr>
+        
+    </table> 
+</div> 
 <router-outlet></router-outlet>

@@ -91,34 +91,6 @@ img{
     height: 75px;
     vertical-align:middle;
 }
-/* menu bar styling of the page */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:  rebeccapurple;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: lightgray;
-}
-
-.active {
-    background-color: mediumpurple;
-}
 
 .newdiv1{
     background-color: lightgray;
@@ -132,6 +104,7 @@ li a:hover:not(.active) {
     margin-right: auto;
     font-weight: normal;
     font-size: 15px;
+    height: 300px;
 
 }
 .newdiv12{
@@ -147,7 +120,7 @@ li a:hover:not(.active) {
     margin-left:auto;
     margin-right:auto;
     width: fit-content;
-    height: fit-content;
+    height: 300px;
     font-weight: normal;
     font-size: 13px;
 }
@@ -186,34 +159,7 @@ p{
     font-size: 15px;
 }
 
-table, td {
-    border: 1px solid black;
-    align-content: center;
-    
-  }
 
-  table {
-    margin-top: 20px;
-    border-collapse: collapse;
-    border-spacing: 2;
-    width: 90%;
-    border: 1px solid #ddd;
-    font-size: bold;
-    margin-left: auto;
-    margin-right: auto;
-  }
- 
-
- 
- /* th, td { */
-th,td{
-    text-align: center;
-    padding: 16px;
-    width: 200px;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    color:black;
-  }
   .ok{
       color:white;
       background-color: rebeccapurple;
@@ -266,3 +212,57 @@ th,td{
 .label22{
     margin-right: 0px;
 }
+
+/* table css */
+/*
+table, td {
+    border: 1px solid black;
+    align-content: center;
+    
+  }
+
+  table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 2;
+    width: 90%;
+    border: 1px solid black;
+    font-size: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+
+ 
+ /* th, td { */
+/*
+td,th{
+    text-align: center;
+    padding: 16px;
+    width: 200px;
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+  }
+  */
+  table{
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 2;
+    width: 90%;
+    border: 1px solid black;
+    font-size: bold;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 16px;
+    width: 200px;
+    background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    }

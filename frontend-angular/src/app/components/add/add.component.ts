@@ -10,15 +10,24 @@ export class AddComponent implements OnInit {
   constructor(private http: HttpClient){
 
   }
-  addnew() :void{
-  var userInput = (<HTMLInputElement>document.getElementById("scheduleName")).value;
-  var inputLink = "/api/schedules?"+ "ScheduleName="+userInput;
-  window.location.reload();
-  alert("Schedule Sucessfully Added.");
-    this.http.put( this.mainUrl +inputLink, {responseType:'json'}).subscribe(data =>{
-      console.log("hi")
+  courses: any[];
+  showResults1() : void {
+    var div = document.getElementById("show");
+    div.innerHTML = "";
+    var courseCode = (<HTMLInputElement>document.getElementById("courseID")).value;
+    var courseNum = (<HTMLInputElement>document.getElementById("courseNumber")).value;
+    var courseComp = (<HTMLInputElement>document.getElementById("courseComp")).value
+    console.log(courseCode);
+    console.log(courseNum + " " + courseComp);
+    var link = "/api/courses?"+ "course=" + courseCode +"&courseNum=" + courseNum+ "&courseComponent=" + courseComp;
+
+    this.http.get<any>(this.mainUrl + link).subscribe((data: any) => {
+      //console.log(data);
+      this.courses = data;
+      console.log(this.courses);
     })
   }
+  
   addSchedule() : void{
     var userInput = (<HTMLInputElement>document.getElementById("scheduleName")).value;
     var inputLink = "/api/schedules?"+ "ScheduleName="+userInput;
@@ -29,6 +38,17 @@ export class AddComponent implements OnInit {
        
    // console.log("added"+userInput)
     alert("added");
+  }
+  addCourse(course_subject:String,button_id:String,coursename:String){
+    var buttonid= button_id;
+    var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
+    var link = "/api/schedule/savedCourse?"+"Schedulenaming="+schedule+"&course_subject="+course_subject+"&button_id="+button_id+"&name="+coursename;
+    console.log(link);
+    this.http.put<any>(this.mainUrl + link , schedule).subscribe(() => {
+     alert("Added " +course_subject+" "+ button_id + " : " + coursename + " to "+ schedule);
+     
+    })
+    //alert("added");
   }
   ngOnInit(): void {
     
@@ -56,16 +76,9 @@ export class AddComponent implements OnInit {
       }
     })
   }
+  /*
   showResults():void {
-    var div = document.getElementById("show");
-    div.innerHTML = "";
-    var courseCode = (<HTMLInputElement>document.getElementById("courseID")).value;
-    var courseNum = (<HTMLInputElement>document.getElementById("courseNumber")).value;
-    var courseComp = (<HTMLInputElement>document.getElementById("courseComp")).value
-    console.log(courseCode);
-    console.log(courseNum + " " + courseComp);
-    var link = "/api/courses?"+ "course=" + courseCode +"&courseNum=" + courseNum+ "&courseComponent=" + courseComp;
-
+    
     this.http.get<any>(this.mainUrl + link).subscribe(data => {
       if(courseCode == "all_subjects" && courseNum == ""){
         //alert("Unable to display your search results as it exceeds 200 courses. Please refine your search.");
@@ -79,6 +92,6 @@ export class AddComponent implements OnInit {
       
   
     })
-  }
+  }*/
 }
 
