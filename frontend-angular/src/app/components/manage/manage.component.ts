@@ -44,7 +44,21 @@ alert("This schedule could not be deleted. Try again.")
 }
 
  })
- 
+  
+  }
+  loadSchedules() : void {
+    //var div = document.getElementById("show2");
+    //div.innerHTML = "";
+    //div.setAttribute("class","newdiv13");
+    var div = document.getElementById("show2");
+    div.innerHTML = "";
+    div.setAttribute("class","newdiv13");
+    var schedule = (<HTMLInputElement>document.getElementById("Schedulenaming")).value;
+    var request = "/api/schedule/find/schedule?"+"scheduleName="+schedule;
+    this.http.get<any>(this.mainUrl + request).subscribe(data =>{
+    alert(JSON.stringify(data));
+    
+    })
   }
   ngOnInit(): void {
     this.http.get<any>(this.mainUrl + '/api/schedule/saved').subscribe(data => {
